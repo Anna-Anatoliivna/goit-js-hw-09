@@ -35,6 +35,18 @@
   outline: transparent;
 }
 
+.textarea {
+   width: 100%;
+  height: 80px;
+  padding-left: 34px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  outline: transparent;
+
+}
 .btn {
   display: block;
   border-radius: 8px;

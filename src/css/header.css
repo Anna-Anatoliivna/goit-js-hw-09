@@ -1,0 +1,22 @@
+.list-header {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+ 
+}
+
+.list-item-header {
+  justify-content: center;
+  /* width: 86px;
+  height: 40px; */
+  background: #4e75ff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  margin-bottom: 8px;
+   padding: 8px;
+  }

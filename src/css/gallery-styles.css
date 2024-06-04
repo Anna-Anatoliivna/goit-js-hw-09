@@ -1,9 +1,10 @@
-body {
+/* body {
   font-family: 'Montserat', sans-serif;
   background-color: #fff;
   color: #212121;
   line-height: 0;
-}
+} */
+
 .container {
   max-width: 1128px;
   margin: 24px 156px;

@@ -28,9 +28,6 @@ imgLinkEl.forEach(link => {
     });  
 });
 
-// модалка через бібліотеку
-
-
 ulElem.addEventListener('click', e => {
     if (e.target === e.currentTarget) return;
     const options = {
@@ -39,20 +36,4 @@ ulElem.addEventListener('click', e => {
     const lightbox = new SimpleLightbox('.gallery a', options);
 });
 
-   
-//     function onModalClose(e) {
-//     console.log(e.code);
-//     if (e.code === 'Escape'){
-//         instance.close();
-//     }
-// };
-//      window.addEventListener('keydown', onModalClose);
-// });
-
-// backdropEl.addEventListener('click', e => {
-//     if (e.target === e.currentTarget) {
-//         instance.close();
-//         window.removeEventListener('keydown', onModalClose);
-//     };
-// });
 
