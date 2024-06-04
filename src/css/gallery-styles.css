@@ -1,6 +1,8 @@
 .container {
   max-width: 1128px;
   margin: 24px 156px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .gallery {
   padding: 0px;
