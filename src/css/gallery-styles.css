@@ -1,20 +1,14 @@
-/* body {
-  font-family: 'Montserat', sans-serif;
-  background-color: #fff;
-  color: #212121;
-  line-height: 0;
-} */
-
 .container {
   max-width: 1128px;
   margin: 24px 156px;
 }
 .gallery {
-  padding: 0;
+  padding: 0px;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px 24px;
+  gap: 20px;
+  justify-content: center;
 }
 .gallery-item {
   display: flex;
@@ -22,36 +16,17 @@
   justify-content: center;
   flex-direction: column;
 }
-.backdrop {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
+
+.gallery-image {
+  display: block;
+  width: 360px;
+  height: 200px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+/* body .sl-overlay {
   background-color: rgba(46, 47, 66, 0.8);
-
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  transition: oppacity 200ms ease-in-out, visibility 200ms ease-in-out;
 }
-.modal {
-  width: 1112px;
-  min-height: 640px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translate(-50%, -50%);
-  background-color: #fcfcfc;
-}
-
-.show-modal {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
-}
+body .sl.counter {
+  color: #fff !important;
+} */
