@@ -26,9 +26,9 @@
   transform: scale(1);
   transition: transform 0.5s;
 }
-/* body .sl-overlay {
+body .sl-overlay {
   background-color: rgba(46, 47, 66, 0.8);
 }
 body .sl.counter {
-  color: #fff !important;
-} */
+  color: #fff;
+}

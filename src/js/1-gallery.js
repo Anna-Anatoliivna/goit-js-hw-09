@@ -1,5 +1,5 @@
 import SimpleLightbox from "simplelightbox";
-
+import "simplelightbox/dist/simple-lightbox.min.css";
 const images = [
   {
     preview:
@@ -65,9 +65,7 @@ const images = [
     description: 'Lighthouse Coast Sea',
   },
 ];
-
 const ulElem = document.querySelector('.gallery');
-
 
 function imageTamplate(image) {
     return `<li class="gallery-item">
@@ -84,7 +82,6 @@ function imageTamplate(image) {
 const markup = imagesTamplate(images);
 ulElem.innerHTML = markup;
 
-// заборона на завантаження зображення на ПК по кліку
 const imgLinkEl =  document.querySelectorAll('.gallery-link');
 imgLinkEl.forEach(link => {
     link.addEventListener('click', e => {
