@@ -4,28 +4,61 @@ const formData = {
 };
 
 const formEl = document.querySelector('.feedback-form');
-let inputArr = document.querySelectorAll('input');
-inputArr = Array.from(inputArr);
+
 formEl.addEventListener('submit', myForm);
+
 function myForm(event) {
   event.preventDefault();
-  let isValid = false;
-  // перевірка на ісвалід
-  inputArr.forEach(input => {
-    if (input.value) {
-      isValid = true;
-    } else {
-      isValid = false;
-      formEl.reset();
-    }
-  });
-  if (!isValid) {
+  const form = event.target;
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
+  
+  if (email === '' || message === '') {
     alert('All form fields must be filled in');
   } else {
-    let valueObj = { email: '', password: '' };
-    valueObj.email = inputArr[0].value;
-    valueObj.password = inputArr[1].value;
+    console.log(`email: ${email}`, `message: ${message}`);
     formEl.reset();
-    return console.log(valueObj);
+  }
+};
+
+formEl.addEventListener('input', () => {
+  const formData = new FormData(formEl);
+  const email = formData.get('email');
+  const message = formData.get('message');
+  const data = { email, message };
+  saveToLS('formData', data);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  const data = loadFromLS('formData');
+  formEl.elements.email.value = data?.email || '';
+  formEl.elements.message.value = data?.message || '';
+});
+
+formEl.addEventListener('submit', (e) => {
+  e.preventDefault();
+   const formData = new FormData(formEl);
+  const email = formData.get('email');
+  const message = formData.get('message');
+  const data = { email, message };
+  console.log(data);
+  formEl.reset();
+  localStorage.removeItem('formData');
+})
+
+function saveToLS(key, value) {
+  const jsonData = JSON.stringify(value);
+    localStorage.setItem(key, jsonData);
+}
+ 
+function loadFromLS(key) {
+  const json = localStorage.getItem(key);
+  try {
+    const data = JSON.parse(json);
+    return data;
+  }
+  catch {
+   return json;
   }
 }
+
