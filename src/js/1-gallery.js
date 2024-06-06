@@ -89,12 +89,10 @@ imgLinkEl.forEach(link => {
     });  
 });
 
-ulElem.addEventListener('click', e => {
-    if (e.target === e.currentTarget) return;
     const options = {
         captionDelay: 250,
     };
     const lightbox = new SimpleLightbox('.gallery a', options);
-});
+
 
 
