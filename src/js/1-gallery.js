@@ -82,13 +82,6 @@ function imageTamplate(image) {
 const markup = imagesTamplate(images);
 ulElem.innerHTML = markup;
 
-const imgLinkEl =  document.querySelectorAll('.gallery-link');
-imgLinkEl.forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-    });  
-});
-
     const options = {
         captionDelay: 250,
     };
